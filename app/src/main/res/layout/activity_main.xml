@@ -253,7 +253,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:layout_width="250dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:drawableLeft="@drawable/cadeado"
@@ -261,6 +261,119 @@
                     android:paddingBottom="30dp"
                     android:textColor="@color/white"
                     android:paddingLeft="8dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="8dp"
+                            android:textColor="@color/black"
+                            android:text="8 ou 9"/>
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="8dp"
+                            android:textColor="@color/black"
+                            android:text="8 ou 9"/>
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/white"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:text="8 ou 9"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"
+                            android:text="8 ou 9"/>
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/white"
+                            android:layout_marginRight="8dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:text="8 ou 9"/>
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/black"
+                            android:paddingLeft="22dp"
+                            android:drawableLeft="@drawable/backspace" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="260dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:textColor="#DD792E"
+                        android:text="acessar"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="esqueci minha senha"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
 
             </androidx.cardview.widget.CardView>
 
