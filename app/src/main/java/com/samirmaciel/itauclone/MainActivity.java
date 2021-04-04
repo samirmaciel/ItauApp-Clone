@@ -10,6 +10,7 @@ import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private CardView cardViewCenter;
     private CardView cardViewContaTop;
     private CardView cardview;
+    private CardView cardViewTransparente;
+    private CardView cardViewAlternarconta;
     private ImageView btnExpandir1;
     private ImageView btnExpandir2;
 
@@ -29,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnExpandir1 = findViewById(R.id.expandirInfos1);
         btnExpandir2 = findViewById(R.id.expandirInfos2);
 
 
@@ -38,19 +40,33 @@ public class MainActivity extends AppCompatActivity {
         cardViewContaTop = findViewById(R.id.cardViewContaTop);
         cardViewExpansivelTop = findViewById(R.id.cardViewExpansivelTop);
         CardViewExpansivelBottom = findViewById(R.id.cardViewExpansivelBottom);
+        cardViewTransparente = findViewById(R.id.cardViewTransparente);
+        cardViewAlternarconta = findViewById(R.id.cardViewAlternarconta);
 
-
-        btnExpandir1.setOnClickListener(new View.OnClickListener() {
+        cardViewTransparente.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
-                if(cardViewExpansivelTop.getVisibility()==View.GONE){
+                if(cardViewContaTop.getVisibility() == View.VISIBLE){
                     TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
                     cardViewContaTop.setVisibility(View.GONE);
+                    cardViewAlternarconta.setVisibility(View.VISIBLE);
+                    cardViewTransparente.setVisibility(View.VISIBLE);
                     cardViewCenter.setVisibility(View.VISIBLE);
                     CardViewExpansivelBottom.setVisibility(View.VISIBLE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
+                }else{
+                    TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    cardViewContaTop.setVisibility(View.VISIBLE);
+                    cardViewTransparente.setVisibility(View.GONE);
+                    cardViewAlternarconta.setVisibility(View.GONE);
+                    cardViewCenter.setVisibility(View.GONE);
+                    CardViewExpansivelBottom.setVisibility(View.GONE);
+                    cardViewExpansivelTop.setVisibility(View.VISIBLE);
+                    btnExpandir2.setRotation(0);
                 }
+
+                Toast.makeText(getApplicationContext(), "Touch", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -58,17 +74,29 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
-                if(cardViewExpansivelTop.getVisibility()==View.VISIBLE){
+                if(cardViewContaTop.getVisibility() == View.VISIBLE){
                     TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    cardViewContaTop.setVisibility(View.GONE);
+                    cardViewAlternarconta.setVisibility(View.VISIBLE);
+                    cardViewTransparente.setVisibility(View.VISIBLE);
+                    cardViewCenter.setVisibility(View.VISIBLE);
+                    CardViewExpansivelBottom.setVisibility(View.VISIBLE);
+                    cardViewExpansivelTop.setVisibility(View.VISIBLE);
+                    btnExpandir2.setRotation(180);
+                }else{
+                    TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    cardViewTransparente.setVisibility(View.GONE);
+                    cardViewAlternarconta.setVisibility(View.GONE);
                     cardViewCenter.setVisibility(View.GONE);
                     cardViewContaTop.setVisibility(View.VISIBLE);
                     CardViewExpansivelBottom.setVisibility(View.GONE);
-                    cardViewExpansivelTop.setVisibility(View.GONE);
+                    cardViewExpansivelTop.setVisibility(View.VISIBLE);
+                    btnExpandir2.setRotation(0);
                 }
             }
         });
-
-
-
     }
+
+
+
 }

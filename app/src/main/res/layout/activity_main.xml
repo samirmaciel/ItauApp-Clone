@@ -23,7 +23,6 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewExpansivelTop"
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -32,101 +31,98 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewAlternarconta"
+                        android:layout_width="wrap_content"
+                        app:cardElevation="0dp"
+                        android:visibility="gone"
+                        android:layout_height="60dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="90dp"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="#837E79"
+                            android:text="alterar Conta"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardViewContaTop"
+                        app:cardElevation="0dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="190dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="#837E79"
-                        android:text="alterar Conta"/>
+                        android:layout_height="60dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="18dp"
+                                    android:src="@mipmap/ic_launcher_round"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Olá, Samir"
+                                    android:textColor="#DD792E"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="2dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#837E79"
+                                    android:text="ag 5555 c/c 55804-2"/>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
 
                     <ImageView
                         android:id="@+id/expandirInfos2"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginTop="15dp"
-                        android:rotation="180"
+                        android:layout_marginLeft="108dp"
                         android:src="@drawable/seta_baixo_azul2x"/>
-
-
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
 
             </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardViewContaTop"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="18dp"
-                            android:src="@mipmap/ic_launcher_round"/>
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:layout_marginLeft="5dp"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Olá, Samir"
-                            android:textColor="#DD792E"
-                            android:textStyle="bold"
-                            android:layout_marginBottom="2dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#837E79"
-                            android:text="ag 5555 c/c 55804-2"/>
-
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/expandirInfos1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="100dp"
-                            android:src="@drawable/seta_baixo_azul2x"/>
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-            </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardViewCenter"
@@ -165,7 +161,6 @@
                         android:gravity="center_vertical"
                         android:layout_marginLeft="5dp"
                         android:orientation="vertical">
-
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -229,160 +224,177 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
 
-
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="0dp"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewInputs"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginVertical="100dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewInputSenha"
-                android:layout_width="match_parent"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:layout_width="260dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:drawableLeft="@drawable/cadeado"
-                    android:backgroundTint="@color/white"
-                    android:paddingBottom="30dp"
-                    android:textColor="@color/white"
-                    android:paddingLeft="8dp"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewButtons"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:outlineSpotShadowColor="@android:color/transparent"
-                app:cardBackgroundColor="@android:color/transparent">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_horizontal">
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:layout_width="80dp"
-                            android:layout_height="match_parent"
-                            android:backgroundTint="@color/white"
-                            android:textAllCaps="false"
-                            android:layout_marginRight="8dp"
-                            android:textColor="@color/black"
-                            android:text="8 ou 9"/>
-                        <Button
-                            android:layout_width="80dp"
-                            android:layout_height="match_parent"
-                            android:backgroundTint="@color/white"
-                            android:textAllCaps="false"
-                            android:layout_marginRight="8dp"
-                            android:textColor="@color/black"
-                            android:text="8 ou 9"/>
-                        <Button
-                            android:layout_width="80dp"
-                            android:layout_height="match_parent"
-                            android:backgroundTint="@color/white"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:text="8 ou 9"/>
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:layout_width="80dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="8dp"
-                            android:backgroundTint="@color/white"
-                            android:textColor="@color/black"
-                            android:textAllCaps="false"
-                            android:text="8 ou 9"/>
-                        <Button
-                            android:layout_width="80dp"
-                            android:layout_height="match_parent"
-                            android:backgroundTint="@color/white"
-                            android:layout_marginRight="8dp"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:text="8 ou 9"/>
-                        <Button
-                            android:layout_width="80dp"
-                            android:layout_height="match_parent"
-                            android:backgroundTint="@color/white"
-                            android:textColor="@color/black"
-                            android:paddingLeft="22dp"
-                            android:drawableLeft="@drawable/backspace" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:outlineSpotShadowColor="@android:color/transparent"
-                app:cardBackgroundColor="@android:color/transparent">
-
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewInputSenha"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="15dp"
-                    android:orientation="vertical">
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
 
-
-                    <com.google.android.material.button.MaterialButton
+                    <EditText
                         android:layout_width="260dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:backgroundTint="@color/white"
-                        android:textColor="#DD792E"
-                        android:text="acessar"/>
-                    <TextView
+                        android:drawableLeft="@drawable/cadeado"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="30dp"
+                        android:textColor="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewButtons"
+                    android:layout_width="match_parent"
+                    app:cardElevation="0dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="esqueci minha senha"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="@color/white"
+                                android:text="8 ou 9"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="@color/white"
+                                android:text="8 ou 9"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/white"
+                                android:text="8 ou 9"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="@color/white"
+                                android:text="8 ou 9"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="8dp"
+                                android:backgroundTint="@color/white"
+                                android:text="8 ou 9"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/white"
+                                android:drawableLeft="@drawable/backspace"
+                                android:paddingLeft="22dp"
+                                android:textColor="@color/black" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardElevation="0dp"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
 
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/white"
+                            android:text="acessar"
+                            android:textColor="#DD792E" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:text="esqueci minha senha"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
 
 
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-
-            </androidx.cardview.widget.CardView>
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
 
 
-    </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewTransparente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#90000000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
 
 
 
