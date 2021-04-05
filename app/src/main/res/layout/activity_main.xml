@@ -233,14 +233,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:layout_marginVertical="100dp"
+            android:layout_marginVertical="120dp"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="0dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="senha eletrônica"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardViewInputSenha"
@@ -250,13 +259,18 @@
                     app:cardElevation="0dp">
 
                     <EditText
-                        android:layout_width="260dp"
+                        android:id="@+id/inputSenha"
+                        android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:backgroundTint="@color/white"
                         android:drawableLeft="@drawable/cadeado"
+                        android:inputType="numberPassword"
+                        android:drawablePadding="8dp"
                         android:paddingLeft="8dp"
+                        android:letterSpacing="1"
+                        android:maxLength="6"
                         android:paddingBottom="30dp"
+                        android:backgroundTint="@color/white"
                         android:textColor="@color/white" />
 
                 </androidx.cardview.widget.CardView>
@@ -280,28 +294,29 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:layout_width="80dp"
-                                android:layout_height="match_parent"
+                                android:id="@+id/btnNum1"
+                                android:layout_width="90dp"
+                                android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
-                                android:text="8 ou 9"
+                                android:text="6 ou 4"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="80dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="90dp"
+                                android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
-                                android:text="8 ou 9"
+                                android:text="5 ou 6"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="80dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="90dp"
+                                android:layout_height="60dp"
                                 android:backgroundTint="@color/white"
-                                android:text="8 ou 9"
+                                android:text="1 ou 3"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -312,8 +327,8 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:layout_width="80dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="90dp"
+                                android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
                                 android:text="8 ou 9"
@@ -321,8 +336,8 @@
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="80dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="90dp"
+                                android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
                                 android:text="8 ou 9"
@@ -330,8 +345,8 @@
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="80dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="90dp"
+                                android:layout_height="60dp"
                                 android:backgroundTint="@color/white"
                                 android:drawableLeft="@drawable/backspace"
                                 android:paddingLeft="22dp"
@@ -357,7 +372,7 @@
 
 
                         <com.google.android.material.button.MaterialButton
-                            android:layout_width="260dp"
+                            android:layout_width="280dp"
                             android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
                             android:text="acessar"
@@ -379,6 +394,90 @@
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            app:cardElevation="0dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@drawable/pix_outlined"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="PIX"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="70dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@drawable/itoken_outlined"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="iToken"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="70dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@drawable/ajuda_outlined"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="ajuda"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
