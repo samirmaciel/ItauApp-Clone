@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
     private CardView cardViewCenter;
     private CardView cardViewContaTop;
     private CardView cardview;
+    private CardView cardViewButtonsInput;
     private CardView cardViewTransparente;
     private CardView cardViewAlternarconta;
+    private CardView cardViewinputs;
     private EditText inputSenha;
     private ImageView btnExpandir2;
 
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnExpandir2 = findViewById(R.id.expandirInfos2);
 
-
+        cardViewButtonsInput = findViewById(R.id.cardViewButtons);
         cardViewCenter = findViewById(R.id.cardViewCenter);
         cardview = findViewById(R.id.cardView);
         cardViewContaTop = findViewById(R.id.cardViewContaTop);
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         CardViewExpansivelBottom = findViewById(R.id.cardViewExpansivelBottom);
         cardViewTransparente = findViewById(R.id.cardViewTransparente);
         cardViewAlternarconta = findViewById(R.id.cardViewAlternarconta);
+        cardViewinputs = findViewById(R.id.cardViewInputs);
         inputSenha = findViewById(R.id.inputSenha);
         inputSenha.setTransformationMethod(new MyPasswordTransformationMethod());
 
@@ -64,9 +68,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         inputSenha.setOnTouchListener(new View.OnTouchListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                if(cardViewButtonsInput.getVisibility() == View.GONE){
+                    TransitionManager.beginDelayedTransition(cardViewinputs, new AutoTransition());
+                    cardViewButtonsInput.setVisibility(View.VISIBLE);
 
+                }
                 hideSoftKeyboard(MainActivity.this);
                 return true;
             }

@@ -74,7 +74,7 @@
                                     android:layout_marginRight="8dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="18dp"
-                                    android:src="@mipmap/ic_launcher_round"/>
+                                    android:src="@drawable/perfil"/>
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -151,7 +151,7 @@
                             android:layout_marginRight="8dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="18dp"
-                            android:src="@mipmap/ic_launcher_round"/>
+                            android:src="@drawable/perfil"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -226,14 +226,19 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        // CARDVIEW INPUTS -------------------------------------------------------
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewInputs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginVertical="120dp"
+            android:layout_marginVertical="80dp"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="0dp">
 
@@ -246,41 +251,46 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="senha eletrônica"
                     android:layout_marginBottom="20dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"/>
+                    android:text="senha eletrônica"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                // CARDVIEW EDITTEXT SENHA ------------------------------------------------
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardViewInputSenha"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="18dp"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardElevation="0dp">
 
                     <EditText
                         android:id="@+id/inputSenha"
-                        android:layout_width="300dp"
+                        android:layout_width="245dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/white"
                         android:drawableLeft="@drawable/cadeado"
-                        android:inputType="numberPassword"
                         android:drawablePadding="8dp"
-                        android:paddingLeft="8dp"
+                        android:inputType="numberPassword"
                         android:letterSpacing="1"
                         android:maxLength="6"
-                        android:paddingBottom="30dp"
-                        android:backgroundTint="@color/white"
+                        android:paddingBottom="25dp"
                         android:textColor="@color/white" />
 
                 </androidx.cardview.widget.CardView>
 
+                // CARDVIEW BOTÕES DE SENHA ---------------------------------------------
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardViewButtons"
                     android:layout_width="match_parent"
-                    app:cardElevation="0dp"
                     android:layout_height="match_parent"
-                    app:cardBackgroundColor="@android:color/transparent">
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -295,7 +305,7 @@
 
                             <Button
                                 android:id="@+id/btnNum1"
-                                android:layout_width="90dp"
+                                android:layout_width="80dp"
                                 android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
@@ -304,7 +314,7 @@
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="90dp"
+                                android:layout_width="80dp"
                                 android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
@@ -313,7 +323,7 @@
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="90dp"
+                                android:layout_width="80dp"
                                 android:layout_height="60dp"
                                 android:backgroundTint="@color/white"
                                 android:text="1 ou 3"
@@ -327,7 +337,7 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:layout_width="90dp"
+                                android:layout_width="80dp"
                                 android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
@@ -336,7 +346,7 @@
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="90dp"
+                                android:layout_width="80dp"
                                 android:layout_height="60dp"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
@@ -345,7 +355,7 @@
                                 android:textColor="@color/black" />
 
                             <Button
-                                android:layout_width="90dp"
+                                android:layout_width="80dp"
                                 android:layout_height="60dp"
                                 android:backgroundTint="@color/white"
                                 android:drawableLeft="@drawable/backspace"
@@ -356,26 +366,29 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+                // SEÇÃO BOTTOM DO CARDVIEW DE INPUTS ------------------------------------
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardElevation="0dp"
+                    android:layout_marginTop="5dp"
                     android:outlineSpotShadowColor="@android:color/transparent"
-                    app:cardBackgroundColor="@android:color/transparent">
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="15dp"
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
 
                         <com.google.android.material.button.MaterialButton
-                            android:layout_width="280dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="258dp"
+                            android:layout_height="60dp"
                             android:backgroundTint="@color/white"
                             android:text="acessar"
+                            android:textAllCaps="false"
                             android:textColor="#DD792E" />
 
                         <TextView
@@ -384,7 +397,7 @@
                             android:layout_marginTop="10dp"
                             android:text="esqueci minha senha"
                             android:textColor="@color/white"
-                            android:textSize="15sp" />
+                            android:textSize="14sp" />
 
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -402,8 +415,8 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="bottom"
-            app:cardElevation="0dp"
-            android:backgroundTint="@android:color/transparent">
+            android:backgroundTint="@android:color/transparent"
+            app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -413,23 +426,48 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="58dp"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_marginTop="50dp"
-                        android:src="@drawable/pix_outlined"/>
+                        android:src="@drawable/pix_outlined" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="PIX"/>
+                        android:text="Pix"
+                        android:textSize="12sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@drawable/itoken_outlined" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="iToken"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -440,40 +478,20 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_marginTop="50dp"
-                        android:src="@drawable/itoken_outlined"/>
+                        android:src="@drawable/ajuda_outlined" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="iToken"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="70dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="50dp"
-                        android:src="@drawable/ajuda_outlined"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:text="ajuda"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:text="ajuda"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
 
