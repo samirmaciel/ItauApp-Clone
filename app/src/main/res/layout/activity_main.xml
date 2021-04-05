@@ -98,7 +98,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="#837E79"
-                                    android:text="ag 5555 c/c 55804-2"/>
+                                    android:text="ag **55 c/c ***04-2"/>
 
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -165,7 +165,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Olá, Samir"
+                            android:text="Samir Maciel"
                             android:textColor="#DD792E"
                             android:textStyle="bold"
                             android:layout_marginBottom="2dp"/>
@@ -174,7 +174,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#837E79"
-                            android:text="ag 5555 c/c 55804-2"/>
+                            android:text="ag **55 c/c ***04-2"/>
 
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -225,6 +225,7 @@
     </androidx.cardview.widget.CardView>
 
     <FrameLayout
+        android:id="@+id/container_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -276,6 +277,8 @@
                         android:drawablePadding="8dp"
                         android:inputType="numberPassword"
                         android:letterSpacing="1"
+                        android:textColorHint="@color/black"
+                        android:textSize="20sp"
                         android:maxLength="6"
                         android:paddingBottom="25dp"
                         android:textColor="@color/white" />

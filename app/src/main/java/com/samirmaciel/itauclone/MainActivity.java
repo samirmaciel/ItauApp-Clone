@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView cardViewinputs;
     private EditText inputSenha;
     private ImageView btnExpandir2;
+    private FrameLayout containerFrame;
 
     private Button btnNum1;
 
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         cardViewAlternarconta = findViewById(R.id.cardViewAlternarconta);
         cardViewinputs = findViewById(R.id.cardViewInputs);
         inputSenha = findViewById(R.id.inputSenha);
+        containerFrame = findViewById(R.id.container_frame);
         inputSenha.setTransformationMethod(new MyPasswordTransformationMethod());
 
         btnNum1 = findViewById(R.id.btnNum1);
@@ -74,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 if(cardViewButtonsInput.getVisibility() == View.GONE){
                     TransitionManager.beginDelayedTransition(cardViewinputs, new AutoTransition());
                     cardViewButtonsInput.setVisibility(View.VISIBLE);
-
                 }
                 hideSoftKeyboard(MainActivity.this);
                 return true;
@@ -89,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
                     cardViewContaTop.setVisibility(View.GONE);
                     cardViewAlternarconta.setVisibility(View.VISIBLE);
+                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
                     cardViewTransparente.setVisibility(View.VISIBLE);
                     cardViewCenter.setVisibility(View.VISIBLE);
                     CardViewExpansivelBottom.setVisibility(View.VISIBLE);
@@ -97,14 +100,13 @@ public class MainActivity extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
                     cardViewContaTop.setVisibility(View.VISIBLE);
                     cardViewTransparente.setVisibility(View.GONE);
+                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
                     cardViewAlternarconta.setVisibility(View.GONE);
                     cardViewCenter.setVisibility(View.GONE);
                     CardViewExpansivelBottom.setVisibility(View.GONE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
                     btnExpandir2.setRotation(0);
                 }
-
-                Toast.makeText(getApplicationContext(), "Touch", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -114,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(cardViewContaTop.getVisibility() == View.VISIBLE){
                     TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
                     cardViewContaTop.setVisibility(View.GONE);
                     cardViewAlternarconta.setVisibility(View.VISIBLE);
                     cardViewTransparente.setVisibility(View.VISIBLE);
@@ -123,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                     btnExpandir2.setRotation(180);
                 }else{
                     TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
                     cardViewTransparente.setVisibility(View.GONE);
                     cardViewAlternarconta.setVisibility(View.GONE);
                     cardViewCenter.setVisibility(View.GONE);
@@ -159,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 mSource = source; // Store char sequence
             }
             public char charAt(int index) {
-                return '◯'; // This is the important part
+                return '●'; // This is the important part
             }
             public int length() {
                 return mSource.length(); // Return default
