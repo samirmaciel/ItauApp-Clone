@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     cardViewCenter.setVisibility(View.GONE);
                     CardViewExpansivelBottom.setVisibility(View.GONE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandirAppBar.setRotation(0);
+                    btnExpandirAppBar.animate().rotationX(0f).start();
                 }
             }
         });
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                     cardViewCenter.setVisibility(View.VISIBLE);
                     CardViewExpansivelBottom.setVisibility(View.VISIBLE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandirAppBar.setRotation(180);
+                    btnExpandirAppBar.animate().rotationX(180f).start();
                 }else{
                     TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition());
                     TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                     cardViewContaTop.setVisibility(View.VISIBLE);
                     CardViewExpansivelBottom.setVisibility(View.GONE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandirAppBar.setRotation(0);
+                    btnExpandirAppBar.animate().rotationX(0f).start();
                 }
             }
         });
