@@ -388,7 +388,6 @@
                         <com.google.android.material.button.MaterialButton
                             android:layout_width="258dp"
                             android:layout_height="60dp"
-                            android:backgroundTint="@color/white"
                             android:text="acessar"
                             android:textAllCaps="false"
                             android:textColor="#DD792E" />
