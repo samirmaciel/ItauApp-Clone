@@ -7,9 +7,9 @@
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
-
+    // CARDVIEW APPBAR ---------------------------------------------------------------
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardViewTopBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +110,7 @@
 
 
                     <ImageView
-                        android:id="@+id/expandirInfos2"
+                        android:id="@+id/arrowDownUp"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginTop="15dp"
@@ -119,10 +119,7 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-
             </androidx.cardview.widget.CardView>
-
-
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardViewCenter"
@@ -224,6 +221,9 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
 
+
+    // FRAMELAYOUT COM INPUTS -----------------------------------------------------
+
     <FrameLayout
         android:id="@+id/container_frame"
         android:layout_width="match_parent"
@@ -273,9 +273,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:backgroundTint="@color/white"
-                        android:drawableLeft="@drawable/cadeado"
+                        android:drawableLeft="@drawable/ic_cadeado"
                         android:drawablePadding="8dp"
-                        android:inputType="numberPassword"
                         android:letterSpacing="1"
                         android:textColorHint="@color/black"
                         android:textSize="20sp"
@@ -361,8 +360,8 @@
                                 android:layout_width="80dp"
                                 android:layout_height="60dp"
                                 android:backgroundTint="@color/white"
-                                android:drawableLeft="@drawable/backspace"
-                                android:paddingLeft="22dp"
+                                android:drawableLeft="@drawable/ic_backspace"
+                                android:paddingLeft="25dp"
                                 android:textColor="@color/black" />
 
                         </androidx.appcompat.widget.LinearLayoutCompat>

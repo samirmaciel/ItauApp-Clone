@@ -28,13 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private CardView CardViewExpansivelBottom;
     private CardView cardViewCenter;
     private CardView cardViewContaTop;
-    private CardView cardview;
+    private CardView cardviewTopBar;
     private CardView cardViewButtonsInput;
     private CardView cardViewTransparente;
     private CardView cardViewAlternarconta;
     private CardView cardViewinputs;
     private EditText inputSenha;
-    private ImageView btnExpandir2;
+    private ImageView btnExpandirAppBar;
     private FrameLayout containerFrame;
 
     private Button btnNum1;
@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnExpandir2 = findViewById(R.id.expandirInfos2);
+        btnExpandirAppBar = findViewById(R.id.arrowDownUp);
 
         cardViewButtonsInput = findViewById(R.id.cardViewButtons);
         cardViewCenter = findViewById(R.id.cardViewCenter);
-        cardview = findViewById(R.id.cardView);
+        cardviewTopBar = findViewById(R.id.cardViewTopBar);
         cardViewContaTop = findViewById(R.id.cardViewContaTop);
         cardViewExpansivelTop = findViewById(R.id.cardViewExpansivelTop);
         CardViewExpansivelBottom = findViewById(R.id.cardViewExpansivelBottom);
@@ -58,14 +58,13 @@ public class MainActivity extends AppCompatActivity {
         cardViewinputs = findViewById(R.id.cardViewInputs);
         inputSenha = findViewById(R.id.inputSenha);
         containerFrame = findViewById(R.id.container_frame);
-        inputSenha.setTransformationMethod(new MyPasswordTransformationMethod());
 
         btnNum1 = findViewById(R.id.btnNum1);
 
         btnNum1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputSenha.append("5");
+                inputSenha.append("●");
             }
         });
 
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cardViewContaTop.getVisibility() == View.VISIBLE){
-                    TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition().setDuration(50));
                     cardViewContaTop.setVisibility(View.GONE);
                     cardViewAlternarconta.setVisibility(View.VISIBLE);
                     TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     CardViewExpansivelBottom.setVisibility(View.VISIBLE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
                 }else{
-                    TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition());
                     cardViewContaTop.setVisibility(View.VISIBLE);
                     cardViewTransparente.setVisibility(View.GONE);
                     TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
@@ -105,17 +104,17 @@ public class MainActivity extends AppCompatActivity {
                     cardViewCenter.setVisibility(View.GONE);
                     CardViewExpansivelBottom.setVisibility(View.GONE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandir2.setRotation(0);
+                    btnExpandirAppBar.setRotation(0);
                 }
             }
         });
 
-        btnExpandir2.setOnClickListener(new View.OnClickListener() {
+        btnExpandirAppBar.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
                 if(cardViewContaTop.getVisibility() == View.VISIBLE){
-                    TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition());
                     TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
                     cardViewContaTop.setVisibility(View.GONE);
                     cardViewAlternarconta.setVisibility(View.VISIBLE);
@@ -123,9 +122,9 @@ public class MainActivity extends AppCompatActivity {
                     cardViewCenter.setVisibility(View.VISIBLE);
                     CardViewExpansivelBottom.setVisibility(View.VISIBLE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandir2.setRotation(180);
+                    btnExpandirAppBar.setRotation(180);
                 }else{
-                    TransitionManager.beginDelayedTransition(cardview, new AutoTransition());
+                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition());
                     TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
                     cardViewTransparente.setVisibility(View.GONE);
                     cardViewAlternarconta.setVisibility(View.GONE);
@@ -133,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                     cardViewContaTop.setVisibility(View.VISIBLE);
                     CardViewExpansivelBottom.setVisibility(View.GONE);
                     cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandir2.setRotation(0);
+                    btnExpandirAppBar.setRotation(0);
                 }
             }
         });
@@ -150,30 +149,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-    public class MyPasswordTransformationMethod extends PasswordTransformationMethod {
-        @Override
-        public CharSequence getTransformation(CharSequence source, View view) {
-            return new PasswordCharSequence(source);
-        }
-
-        private class PasswordCharSequence implements CharSequence {
-            private CharSequence mSource;
-            public PasswordCharSequence(CharSequence source) {
-                mSource = source; // Store char sequence
-            }
-            public char charAt(int index) {
-                return '●'; // This is the important part
-            }
-            public int length() {
-                return mSource.length(); // Return default
-            }
-            public CharSequence subSequence(int start, int end) {
-                return mSource.subSequence(start, end); // Return default
-            }
-        }
-    };
-
 
 
 }
