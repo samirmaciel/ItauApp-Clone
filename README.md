@@ -9,5 +9,5 @@ Vetores criados pelo [Ionix Junior](https://github.com/ionixjunior).
 Tela incial
 
 
-![ Alt text](https://github.com/samirmaciel/ItauApp-Clone/blob/master/preview_telainicial.gif) [](preview_telainicial.gif)
+![ Alt text](https://github.com/samirmaciel/ItauApp-Clone/blob/master/preview_telaincial.gif) [](preview_telainicial.gif)
 
