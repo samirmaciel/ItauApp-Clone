@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="incio"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_menu_home"/>
+    <item android:title="extrato" />
+    <item android:title="transaçoes" />
+    <item android:title="serviços"
+        android:icon="@drawable/ic_menu_servicos"/>
+    <item android:title="ajuda"
+        android:icon="@drawable/ic_ajuda_outlined"/>
+</menu>

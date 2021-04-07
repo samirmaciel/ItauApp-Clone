@@ -387,6 +387,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAcessar"
                             android:layout_width="258dp"
                             android:layout_height="45dp"
                             android:text="acessar"

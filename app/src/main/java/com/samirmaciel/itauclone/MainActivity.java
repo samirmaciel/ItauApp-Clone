@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText inputSenha;
     private ImageView btnExpandirAppBar;
     private FrameLayout containerFrame;
+    private Button btnAcessar;
 
     private Button btnNum1;
 
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         cardViewinputs = findViewById(R.id.cardViewInputs);
         inputSenha = findViewById(R.id.inputSenha);
         containerFrame = findViewById(R.id.container_frame);
+        btnAcessar = findViewById(R.id.btnAcessar);
 
         btnNum1 = findViewById(R.id.btnNum1);
 
@@ -65,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 inputSenha.append("●");
+            }
+        });
+
+        btnAcessar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SecondActivity.class));
             }
         });
 
