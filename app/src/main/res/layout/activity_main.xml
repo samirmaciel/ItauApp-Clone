@@ -263,7 +263,6 @@
                     android:id="@+id/cardViewInputSenha"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="18dp"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardElevation="0dp">
 
@@ -272,15 +271,15 @@
                         android:layout_width="245dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="1dp"
                         android:backgroundTint="@color/white"
                         android:drawableLeft="@drawable/ic_cadeado"
                         android:drawablePadding="8dp"
                         android:letterSpacing="1"
-                        android:textColorHint="@color/black"
-                        android:textSize="20sp"
                         android:maxLength="6"
                         android:paddingBottom="25dp"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -291,6 +290,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:visibility="gone"
+                    android:layout_marginBottom="5dp"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardElevation="0dp">
 
@@ -308,7 +308,8 @@
                             <Button
                                 android:id="@+id/btnNum1"
                                 android:layout_width="80dp"
-                                android:layout_height="60dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/ripple"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
                                 android:text="6 ou 4"
@@ -317,7 +318,8 @@
 
                             <Button
                                 android:layout_width="80dp"
-                                android:layout_height="60dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/ripple"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
                                 android:text="5 ou 6"
@@ -326,7 +328,8 @@
 
                             <Button
                                 android:layout_width="80dp"
-                                android:layout_height="60dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/ripple"
                                 android:backgroundTint="@color/white"
                                 android:text="1 ou 3"
                                 android:textAllCaps="false"
@@ -336,12 +339,14 @@
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="8dp"
                             android:orientation="horizontal">
 
                             <Button
                                 android:layout_width="80dp"
-                                android:layout_height="60dp"
+                                android:layout_height="45dp"
                                 android:layout_marginRight="8dp"
+                                android:background="@drawable/ripple"
                                 android:backgroundTint="@color/white"
                                 android:text="8 ou 9"
                                 android:textAllCaps="false"
@@ -349,8 +354,9 @@
 
                             <Button
                                 android:layout_width="80dp"
-                                android:layout_height="60dp"
+                                android:layout_height="45dp"
                                 android:layout_marginRight="8dp"
+                                android:background="@drawable/ripple"
                                 android:backgroundTint="@color/white"
                                 android:text="8 ou 9"
                                 android:textAllCaps="false"
@@ -358,8 +364,9 @@
 
                             <Button
                                 android:layout_width="80dp"
-                                android:layout_height="60dp"
+                                android:layout_height="45dp"
                                 android:backgroundTint="@color/white"
+                                android:background="@drawable/ripple"
                                 android:drawableLeft="@drawable/ic_backspace"
                                 android:paddingLeft="25dp"
                                 android:textColor="@color/black" />
@@ -387,15 +394,16 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:layout_width="258dp"
-                            android:layout_height="60dp"
+                            android:layout_height="45dp"
                             android:text="acessar"
+                            android:background="@drawable/ripple"
                             android:textAllCaps="false"
                             android:textColor="#DD792E" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="15dp"
                             android:text="esqueci minha senha"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
