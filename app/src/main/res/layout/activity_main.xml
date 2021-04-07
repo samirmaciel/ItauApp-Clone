@@ -31,7 +31,6 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardViewAlternarconta"
                         android:layout_width="wrap_content"
@@ -85,7 +84,6 @@
                                 android:layout_marginLeft="5dp"
                                 android:orientation="vertical">
 
-
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -100,14 +98,12 @@
                                     android:textColor="#837E79"
                                     android:text="ag **55 c/c ***04-2"/>
 
-
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
 
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </com.google.android.material.card.MaterialCardView>
-
 
                     <ImageView
                         android:id="@+id/arrowDownUp"
@@ -173,7 +169,6 @@
                             android:textColor="#837E79"
                             android:text="ag **55 c/c ***04-2"/>
 
-
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -182,9 +177,7 @@
                         android:gravity="center_vertical"
                         android:orientation="vertical">
 
-
                     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -220,7 +213,6 @@
             </androidx.cardview.widget.CardView>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
-
 
     // FRAMELAYOUT COM INPUTS -----------------------------------------------------
 
@@ -263,21 +255,22 @@
                     android:id="@+id/cardViewInputSenha"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardElevation="0dp">
 
                     <EditText
                         android:id="@+id/inputSenha"
-                        android:layout_width="245dp"
+                        android:layout_width="235dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginRight="1dp"
-                        android:backgroundTint="@color/white"
+                        android:background="@drawable/input_bg"
                         android:drawableLeft="@drawable/ic_cadeado"
                         android:drawablePadding="8dp"
                         android:letterSpacing="1"
                         android:maxLength="6"
-                        android:paddingBottom="25dp"
+                        android:paddingBottom="12dp"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -322,7 +315,7 @@
                                 android:background="@drawable/ripple"
                                 android:layout_marginRight="8dp"
                                 android:backgroundTint="@color/white"
-                                android:text="5 ou 6"
+                                android:text="5 ou 2"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black" />
 
@@ -331,7 +324,7 @@
                                 android:layout_height="45dp"
                                 android:background="@drawable/ripple"
                                 android:backgroundTint="@color/white"
-                                android:text="1 ou 3"
+                                android:text="7 ou 3"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -358,7 +351,7 @@
                                 android:layout_marginRight="8dp"
                                 android:background="@drawable/ripple"
                                 android:backgroundTint="@color/white"
-                                android:text="8 ou 9"
+                                android:text="9 ou 1"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black" />
 
@@ -372,7 +365,9 @@
                                 android:textColor="@color/black" />
 
                         </androidx.appcompat.widget.LinearLayoutCompat>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 // SEÇÃO BOTTOM DO CARDVIEW DE INPUTS ------------------------------------
@@ -391,7 +386,6 @@
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
-
                         <com.google.android.material.button.MaterialButton
                             android:layout_width="258dp"
                             android:layout_height="45dp"
@@ -406,7 +400,7 @@
                             android:layout_marginTop="15dp"
                             android:text="esqueci minha senha"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="15sp" />
 
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -503,9 +497,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-
             </LinearLayout>
-
 
         </androidx.cardview.widget.CardView>
 
@@ -521,19 +513,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
