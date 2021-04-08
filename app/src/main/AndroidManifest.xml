@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ItauClone">
-        <activity android:name=".TewActivity2"></activity>
         <activity android:name=".SecondActivity" />
         <activity
             android:name=".MainActivity"

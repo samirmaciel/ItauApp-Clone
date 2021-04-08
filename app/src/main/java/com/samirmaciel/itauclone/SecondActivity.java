@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class SecondActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,7 @@ public class SecondActivity extends AppCompatActivity {
         extratoIcon = findViewById(R.id.extratoIcon);
         transacoesIcon = findViewById(R.id.transacoesIcon);
         servicosIcon = findViewById(R.id.servicoIcon);
+
 
         itemSelected(R.drawable.ic_menu_home_selected,
                 inicioIcon,
@@ -110,6 +113,13 @@ public class SecondActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if(savedInstanceState == null){
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.frame_container, new InicioFragment())
+                    .commit();
+        }
     }
 
 
@@ -137,7 +147,7 @@ public class SecondActivity extends AppCompatActivity {
                 transacoesLinearLayout.setPadding(0, 0, 0, 0);
                 transacoesText.setVisibility(View.VISIBLE);
             case 4:
-                servicosIcon.setImageResource(R.drawable.ic_menu_transacoes);
+                servicosIcon.setImageResource(R.drawable.ic_menu_servicos);
                 servicosLinearLayout.setPadding(0, 0, 0, 0);
                 servicosText.setVisibility(View.VISIBLE);
         }
