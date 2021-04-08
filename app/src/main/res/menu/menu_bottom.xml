@@ -4,7 +4,7 @@
 
     <item android:title="incio"
         android:iconTint="@color/white"
-        android:icon="@drawable/ic_menu_home"/>
+        android:icon="@drawable/home_btn"/>
     <item android:title="extrato" />
     <item android:title="transaçoes" />
     <item android:title="serviços"

@@ -115,30 +115,44 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/inicioLinearLayout"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/inicioIcon"
                     android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_menu_home_selected"/>
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_menu_home"/>
+
+                <TextView
+                    android:id="@+id/inicioText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="inicio"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/extratoLinearLayout"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
                 android:gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/extratoIcon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_menu_extrato"/>
 
                 <TextView
+                    android:id="@+id/extratoText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -147,18 +161,22 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/transacoesBtn"
+                android:clickable="true"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/transacoesIcon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_menu_transacoes"/>
 
                 <TextView
+                    android:id="@+id/textTransacoes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -167,18 +185,21 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/servicoLinearLayout"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/servicoIcon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_menu_servicos"/>
 
                 <TextView
+                    android:id="@+id/servicoText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -188,9 +209,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
