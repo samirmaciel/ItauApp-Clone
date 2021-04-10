@@ -150,6 +150,7 @@ public class SecondActivity extends AppCompatActivity {
                 inicioIcon.getLayoutParams().width = 120;
                 inicioLinearLayout.setPadding(0, 0, 0, 0);
                 inicioText.setVisibility(View.VISIBLE);
+                break;
             case 2:
                 extratoIcon.setImageResource(R.drawable.ic_menu_extrato);
                 extratoIcon.getLayoutParams().height = 120;
@@ -157,18 +158,21 @@ public class SecondActivity extends AppCompatActivity {
                 extratoIcon.setMaxHeight(40);
                 extratoLinearLayout.setPadding(0, 0, 0, 0);
                 extratoText.setVisibility(View.VISIBLE);
+                break;
             case 3:
                 transacoesIcon.setImageResource(R.drawable.ic_menu_transacoes);
                 transacoesIcon.getLayoutParams().height = 120;
                 transacoesIcon.getLayoutParams().width = 120;
                 transacoesLinearLayout.setPadding(0, 0, 0, 0);
                 transacoesText.setVisibility(View.VISIBLE);
+                break;
             case 4:
                 servicosIcon.setImageResource(R.drawable.ic_menu_servicos);
                 servicosIcon.getLayoutParams().height = 120;
                 servicosIcon.getLayoutParams().width = 120;
                 servicosLinearLayout.setPadding(0, 0, 0, 0);
                 servicosText.setVisibility(View.VISIBLE);
+                break;
         }
     }
 }
