@@ -1,6 +1,6 @@
 # ItauApp-Clone
 
-Clone da aplicação bankline do banco Itaú, sendo desenvolvida como forma de estudo no Android Studio.
+Clone da aplicação bankline do banco Itaú, desenvolvida como forma de estudo no Android Studio.
 
 Em progresso...
 
