@@ -18,11 +18,13 @@ import android.widget.Scroller;
 
 public class InicioFragment extends Fragment {
 
-    private ImageView iconExpandir;
+    private ImageView iconExpandirSaldo;
+    private ImageView iconExpandirCredito;
 
     private LinearLayout linearLayoutContainer;
-    private CardView cardViewSaldo;
     private CardView cardViewValorSaldo;
+    private CardView cardViewValorCredito;
+
 
 
     public InicioFragment() {
@@ -36,27 +38,43 @@ public class InicioFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_inicio, container, false);
 
-        iconExpandir = (ImageView) view.findViewById(R.id.iconSetaExpandir);
-        cardViewSaldo = (CardView) view.findViewById(R.id.cardViewSaldo);
+        iconExpandirSaldo = (ImageView) view.findViewById(R.id.iconSetaExpandir);
+        iconExpandirCredito = (ImageView) view.findViewById(R.id.iconSetaExpandirCredito);
         cardViewValorSaldo = (CardView) view.findViewById(R.id.cardViewValorSaldo);
+        cardViewValorCredito = (CardView) view.findViewById(R.id.cardViewValorCredito);
         linearLayoutContainer = (LinearLayout) view.findViewById(R.id.linearLayoutContainer);
 
-        iconExpandir.setOnClickListener(new View.OnClickListener() {
+        iconExpandirSaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(cardViewValorSaldo.getVisibility() == View.GONE){
                     TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
-                    iconExpandir.animate().rotationX(180f).start();
+                    iconExpandirSaldo.animate().rotationX(180f).start();
                     cardViewValorSaldo.setVisibility(View.VISIBLE);
 
                 }else{
                     TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
                     cardViewValorSaldo.setVisibility(View.GONE);
-                    iconExpandir.animate().rotationX(0f).start();
+                    iconExpandirSaldo.animate().rotationX(0f).start();
                 }
             }
         });
 
+        iconExpandirCredito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cardViewValorCredito.getVisibility() == View.GONE){
+                    TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
+                    iconExpandirCredito.animate().rotationX(180f).start();
+                    cardViewValorCredito.setVisibility(View.VISIBLE);
+
+                }else{
+                    TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
+                    cardViewValorCredito.setVisibility(View.GONE);
+                    iconExpandirCredito.animate().rotationX(0f).start();
+                }
+            }
+        });
 
 
 

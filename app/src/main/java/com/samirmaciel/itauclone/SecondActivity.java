@@ -126,7 +126,10 @@ public class SecondActivity extends AppCompatActivity {
     private void itemSelected(int resourceSelected, ImageView icon, LinearLayout btn, TextView text){
 
         icon.setImageResource(resourceSelected);
-        btn.setPadding(0, 35, 0, 0);
+        icon.getLayoutParams().height = 140;
+        icon.getLayoutParams().width = 140;
+        icon.requestLayout();
+        btn.setPadding(0, 20, 0, 0);
         text.setVisibility(View.GONE);
     }
 
@@ -135,19 +138,27 @@ public class SecondActivity extends AppCompatActivity {
         switch (id){
             case 1:
                 inicioIcon.setImageResource(R.drawable.ic_menu_home);
+                inicioIcon.getLayoutParams().height = 120;
+                inicioIcon.getLayoutParams().width = 120;
                 inicioLinearLayout.setPadding(0, 0, 0, 0);
                 inicioText.setVisibility(View.VISIBLE);
             case 2:
                 extratoIcon.setImageResource(R.drawable.ic_menu_extrato);
+                extratoIcon.getLayoutParams().height = 120;
+                extratoIcon.getLayoutParams().width = 120;
                 extratoIcon.setMaxHeight(40);
                 extratoLinearLayout.setPadding(0, 0, 0, 0);
                 extratoText.setVisibility(View.VISIBLE);
             case 3:
                 transacoesIcon.setImageResource(R.drawable.ic_menu_transacoes);
+                transacoesIcon.getLayoutParams().height = 120;
+                transacoesIcon.getLayoutParams().width = 120;
                 transacoesLinearLayout.setPadding(0, 0, 0, 0);
                 transacoesText.setVisibility(View.VISIBLE);
             case 4:
                 servicosIcon.setImageResource(R.drawable.ic_menu_servicos);
+                servicosIcon.getLayoutParams().height = 120;
+                servicosIcon.getLayoutParams().width = 120;
                 servicosLinearLayout.setPadding(0, 0, 0, 0);
                 servicosText.setVisibility(View.VISIBLE);
         }
