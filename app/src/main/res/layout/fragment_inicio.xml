@@ -124,7 +124,8 @@
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="R$ 6,543,54"
-                                android:textColor="#507367"
+                                android:textColor="#28BC4E"
+                                android:letterSpacing="0.1"
                                 android:textSize="25sp" />
 
                             <View

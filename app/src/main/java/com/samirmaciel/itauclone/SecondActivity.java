@@ -61,6 +61,10 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(indexBottomNavigation != 1) {
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.frame_container, new InicioFragment())
+                            .commit();
                     itemUnselected(indexBottomNavigation);
                     itemSelected(R.drawable.ic_menu_home_selected,
                             inicioIcon,
@@ -76,6 +80,10 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (indexBottomNavigation != 2) {
                     itemUnselected(indexBottomNavigation);
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.frame_container, new ExtratoFragment())
+                            .commit();
                     itemSelected(R.drawable.ic_menu_extrato_selected,
                             extratoIcon,
                             extratoLinearLayout,
