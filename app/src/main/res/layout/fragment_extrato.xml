@@ -185,7 +185,7 @@
                 android:layout_marginTop="20dp"
                 android:textColor="#28BC4E"
                 android:letterSpacing="0.1"
-                android:text="6,543,54"/>
+                android:text="1.000,00"/>
 
         </LinearLayout>
 
@@ -456,7 +456,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="15dp"
                 android:textStyle="bold"
-                android:text="R$ 6,664,00"/>
+                android:text="R$ 1.000,00"/>
 
         </LinearLayout>
 
@@ -620,7 +620,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="15dp"
                 android:textStyle="bold"
-                android:text="R$ 6,664,00"/>
+                android:text="R$ 1.000,00"/>
 
         </LinearLayout>
 

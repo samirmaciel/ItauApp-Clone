@@ -88,7 +88,7 @@
                             android:textSize="25sp" />
 
                         <TextView
-                            android:id="@+id/textExpandir"
+                            android:id="@+id/textExpandirSaldo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
@@ -123,7 +123,7 @@
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="15dp"
-                                android:text="R$ 6,543,54"
+                                android:text="R$ 1.000,00"
                                 android:textColor="#28BC4E"
                                 android:letterSpacing="0.1"
                                 android:textSize="25sp" />
@@ -167,7 +167,7 @@
                                     android:textColor="@color/black"
                                     android:layout_marginTop="5px"
                                     android:layout_marginLeft="15dp"
-                                    android:text="limite disponível para uso R$ 10,000,00"/>
+                                    android:text="limite disponível para uso R$ 1,000,00"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
