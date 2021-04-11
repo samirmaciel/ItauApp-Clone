@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ItauClone">
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".views.activities.TabMenuActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.activities.LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

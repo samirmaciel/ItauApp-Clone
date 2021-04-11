@@ -1,15 +1,13 @@
-package com.samirmaciel.itauclone;
+package com.samirmaciel.itauclone.views.activities;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.method.PasswordTransformationMethod;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.MotionEvent;
@@ -19,11 +17,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.samirmaciel.itauclone.R;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private CardView cardViewExpansivelTop;
     private CardView CardViewExpansivelBottom;
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         btnAcessar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                startActivity(new Intent(LoginActivity.this, TabMenuActivity.class));
             }
         });
 
@@ -87,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(cardViewinputs, new AutoTransition());
                     cardViewButtonsInput.setVisibility(View.VISIBLE);
                 }
-                hideSoftKeyboard(MainActivity.this);
+                hideSoftKeyboard(LoginActivity.this);
                 return true;
             }
         });

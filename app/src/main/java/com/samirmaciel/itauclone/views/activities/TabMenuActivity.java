@@ -1,15 +1,18 @@
-package com.samirmaciel.itauclone;
+package com.samirmaciel.itauclone.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
+import com.samirmaciel.itauclone.R;
+import com.samirmaciel.itauclone.views.fragments.ExtratoFragment;
+import com.samirmaciel.itauclone.views.fragments.InicioFragment;
+
+public class TabMenuActivity extends AppCompatActivity {
 
     private LinearLayout inicioLinearLayout;
     private LinearLayout extratoLinearLayout;
