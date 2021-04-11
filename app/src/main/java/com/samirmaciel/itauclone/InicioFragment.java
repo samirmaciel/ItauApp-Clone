@@ -50,36 +50,36 @@ public class InicioFragment extends Fragment {
         expandirCredito = (TextView) view.findViewById(R.id.textExpandirCredito);
         expandirSaldo = (TextView) view.findViewById(R.id.textExpandirSaldo);
 
-        iconExpandirSaldo.setOnClickListener(new View.OnClickListener() {
+        expandirSaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(cardViewValorSaldo.getVisibility() == View.GONE){
+                if(cardViewValorSaldo.getHeight() == 0){
                     TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
                     iconExpandirSaldo.animate().rotationX(180f).start();
-                    cardViewValorSaldo.setVisibility(View.VISIBLE);
+                    cardViewValorSaldo.getLayoutParams().height = 550;
                     expandirSaldo.setText("ocultar");
 
                 }else{
                     TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
-                    cardViewValorSaldo.setVisibility(View.GONE);
+                    cardViewValorSaldo.getLayoutParams().height = 0;
                     expandirSaldo.setText("expandir");
                     iconExpandirSaldo.animate().rotationX(0f).start();
                 }
             }
         });
 
-        iconExpandirCredito.setOnClickListener(new View.OnClickListener() {
+        expandirCredito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(cardViewValorCredito.getVisibility() == View.GONE){
+                if(cardViewValorCredito.getHeight() == 0){
                     TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
                     iconExpandirCredito.animate().rotationX(180f).start();
-                    cardViewValorCredito.setVisibility(View.VISIBLE);
+                    cardViewValorCredito.getLayoutParams().height = 260;
                     expandirCredito.setText("ocultar");
 
                 }else{
                     TransitionManager.beginDelayedTransition(linearLayoutContainer, new AutoTransition());
-                    cardViewValorCredito.setVisibility(View.GONE);
+                    cardViewValorCredito.getLayoutParams().height = 0;
                     expandirCredito.setText("expandir");
                     iconExpandirCredito.animate().rotationX(0f).start();
                 }

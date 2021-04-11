@@ -108,8 +108,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardViewValorSaldo"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:visibility="gone"
+                        android:layout_height="0px"
                         app:cardElevation="0dp">
 
                         <LinearLayout
@@ -174,7 +173,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginLeft="15dp"
-                                    android:layout_marginBottom="30dp"
                                     android:text="*sujeito a encargos"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -402,8 +400,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardViewValorCredito"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:visibility="gone"
+                        android:layout_height="0px"
                         app:cardElevation="0dp">
 
                         <LinearLayout
