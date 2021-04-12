@@ -23,18 +23,18 @@ import com.samirmaciel.itauclone.controllers.LoginController;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private CardView cardViewExpansivelTop;
-    private CardView CardViewExpansivelBottom;
-    private CardView cardViewCenter;
-    private CardView cardViewContaTop;
-    private CardView cardviewTopBar;
-    private CardView cardViewButtonsInput;
-    private CardView cardViewTransparente;
-    private CardView cardViewAlternarconta;
-    private CardView cardViewinputs;
-    private EditText inputSenha;
-    private ImageView btnExpandirAppBar;
-    private FrameLayout containerFrame;
+    public CardView cardViewExpansivelTop;
+    public CardView cardViewExpansivelBottom;
+    public CardView cardViewCenter;
+    public CardView cardViewContaTop;
+    public CardView cardviewTopBar;
+    public CardView cardViewButtonsInput;
+    public CardView cardViewTransparente;
+    public CardView cardViewAlternarconta;
+    public CardView cardViewinputs;
+    public EditText inputSenha;
+    public ImageView btnExpandirAppBar;
+    public FrameLayout containerFrame;
     public Button btnAcessar;
 
     public Button btnNum1;
@@ -42,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     public Button btnNum3;
     public Button btnNum4;
     public Button btnNum5;
+    public Button btnBackSpace;
 
     private LoginController controller;
 
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         cardviewTopBar = findViewById(R.id.cardViewTopBar);
         cardViewContaTop = findViewById(R.id.cardViewContaTop);
         cardViewExpansivelTop = findViewById(R.id.cardViewExpansivelTop);
-        CardViewExpansivelBottom = findViewById(R.id.cardViewExpansivelBottom);
+        cardViewExpansivelBottom = findViewById(R.id.cardViewExpansivelBottom);
         cardViewTransparente = findViewById(R.id.cardViewTransparente);
         cardViewAlternarconta = findViewById(R.id.cardViewAlternarconta);
         cardViewinputs = findViewById(R.id.cardViewInputs);
@@ -73,11 +74,49 @@ public class LoginActivity extends AppCompatActivity {
         btnNum3 = findViewById(R.id.btnNum3);
         btnNum4 = findViewById(R.id.btnNum4);
         btnNum5 = findViewById(R.id.btnNum5);
+        btnBackSpace = findViewById(R.id.btnBackspace);
 
         btnNum1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 inputSenha.append("●");
+            }
+        });
+
+        btnNum2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputSenha.append("●");
+            }
+        });
+
+        btnNum3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputSenha.append("●");
+            }
+        });
+
+        btnNum4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputSenha.append("●");
+            }
+        });
+
+        btnNum5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputSenha.append("●");
+            }
+        });
+
+        btnBackSpace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int inputSenhaSize = inputSenha.getText().toString().length();
+
+
             }
         });
 
@@ -94,11 +133,7 @@ public class LoginActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(cardViewButtonsInput.getVisibility() == View.GONE){
-                    TransitionManager.beginDelayedTransition(cardViewinputs, new AutoTransition());
-                    cardViewButtonsInput.setVisibility(View.VISIBLE);
-                }
-                hideSoftKeyboard(LoginActivity.this);
+                controller.inputPassword();
                 return true;
             }
         });
@@ -107,26 +142,7 @@ public class LoginActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
-                if(cardViewContaTop.getVisibility() == View.VISIBLE){
-                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition().setDuration(50));
-                    cardViewContaTop.setVisibility(View.GONE);
-                    cardViewAlternarconta.setVisibility(View.VISIBLE);
-                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
-                    cardViewTransparente.setVisibility(View.VISIBLE);
-                    cardViewCenter.setVisibility(View.VISIBLE);
-                    CardViewExpansivelBottom.setVisibility(View.VISIBLE);
-                    cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                }else{
-                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition());
-                    cardViewContaTop.setVisibility(View.VISIBLE);
-                    cardViewTransparente.setVisibility(View.GONE);
-                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
-                    cardViewAlternarconta.setVisibility(View.GONE);
-                    cardViewCenter.setVisibility(View.GONE);
-                    CardViewExpansivelBottom.setVisibility(View.GONE);
-                    cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandirAppBar.animate().rotationX(0f).start();
-                }
+                controller.appBarScroll();
             }
         });
 
@@ -134,42 +150,12 @@ public class LoginActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
-                if(cardViewContaTop.getVisibility() == View.VISIBLE){
-                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition());
-                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
-                    cardViewContaTop.setVisibility(View.GONE);
-                    cardViewAlternarconta.setVisibility(View.VISIBLE);
-                    cardViewTransparente.setVisibility(View.VISIBLE);
-                    cardViewCenter.setVisibility(View.VISIBLE);
-                    CardViewExpansivelBottom.setVisibility(View.VISIBLE);
-                    cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandirAppBar.animate().rotationX(180f).start();
-                }else{
-                    TransitionManager.beginDelayedTransition(cardviewTopBar, new AutoTransition());
-                    TransitionManager.beginDelayedTransition(containerFrame, new AutoTransition());
-                    cardViewTransparente.setVisibility(View.GONE);
-                    cardViewAlternarconta.setVisibility(View.GONE);
-                    cardViewCenter.setVisibility(View.GONE);
-                    cardViewContaTop.setVisibility(View.VISIBLE);
-                    CardViewExpansivelBottom.setVisibility(View.GONE);
-                    cardViewExpansivelTop.setVisibility(View.VISIBLE);
-                    btnExpandirAppBar.animate().rotationX(0f).start();
-                }
+                controller.appBarScroll();
             }
         });
     }
 
-    public void hideSoftKeyboard(Activity activity) {
-        try {
-            InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-            View currentFocus = activity.getCurrentFocus();
-            if (currentFocus != null) {
-                inputMethodManager.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 
 
 }
