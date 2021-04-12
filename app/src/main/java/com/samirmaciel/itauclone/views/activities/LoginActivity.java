@@ -114,9 +114,13 @@ public class LoginActivity extends AppCompatActivity {
         btnBackSpace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int inputSenhaSize = inputSenha.getText().toString().length();
+                if(inputSenha.getText().toString().length() > 0){
+                    int charIndex = 0;
+                    String text = inputSenha.getText().toString();
+                    text = text.substring(0, charIndex) + text.substring(charIndex+1);
+                    inputSenha.setText(text);
 
-
+                }
             }
         });
 

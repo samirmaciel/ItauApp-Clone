@@ -44,24 +44,11 @@ public class LoginController {    private LoginActivity view;
 
             int num1 = numbers.get(random.nextInt(numbers.size()));
 
-            int count = 0;
-            while(count < numbers.size()){
-                if(numbers.get(count) == num1){
-                    numbers.remove(count);
-                    break;
-                }
-                count++;
-            }
-            int num2 = numbers.get(random.nextInt(numbers.size()));
+            numbers.remove((Integer) num1);
 
-            count = 0;
-            while(count < numbers.size()){
-                if(numbers.get(count) == num2){
-                    numbers.remove(count);
-                    break;
-                }
-                count++;
-            }
+            int num2 = numbers.get(random.nextInt(numbers.size()));
+            numbers.remove((Integer) num2);
+
             buttons.get(x).setText(num1 + " ou " + num2);
         }
     }
