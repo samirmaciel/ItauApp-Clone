@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        controller.numbersRandom();
+        controller.numbersRandomKeyboard();
 
         inputSenha.setOnTouchListener(new View.OnTouchListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
