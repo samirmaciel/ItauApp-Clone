@@ -19,6 +19,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.samirmaciel.itauclone.R;
+import com.samirmaciel.itauclone.controllers.LoginController;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -34,15 +35,23 @@ public class LoginActivity extends AppCompatActivity {
     private EditText inputSenha;
     private ImageView btnExpandirAppBar;
     private FrameLayout containerFrame;
-    private Button btnAcessar;
+    public Button btnAcessar;
 
-    private Button btnNum1;
+    public Button btnNum1;
+    public Button btnNum2;
+    public Button btnNum3;
+    public Button btnNum4;
+    public Button btnNum5;
+
+    private LoginController controller;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
+
+        controller = new LoginController(this);
 
         btnExpandirAppBar = findViewById(R.id.arrowDownUp);
 
@@ -60,6 +69,10 @@ public class LoginActivity extends AppCompatActivity {
         btnAcessar = findViewById(R.id.btnAcessar);
 
         btnNum1 = findViewById(R.id.btnNum1);
+        btnNum2 = findViewById(R.id.btnNum2);
+        btnNum3 = findViewById(R.id.btnNum3);
+        btnNum4 = findViewById(R.id.btnNum4);
+        btnNum5 = findViewById(R.id.btnNum5);
 
         btnNum1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        controller.numbersRandom();
 
         inputSenha.setOnTouchListener(new View.OnTouchListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)

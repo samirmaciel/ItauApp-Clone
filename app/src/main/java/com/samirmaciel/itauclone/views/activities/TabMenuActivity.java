@@ -37,7 +37,7 @@ public class TabMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_tabmenu);
 
         inicioLinearLayout = findViewById(R.id.inicioLinearLayout);
         extratoLinearLayout = findViewById(R.id.extratoLinearLayout);
