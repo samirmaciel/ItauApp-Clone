@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     public CardView cardViewTransparente;
     public CardView cardViewAlternarconta;
     public CardView cardViewinputs;
+    public CardView cardViewPopupPassword;
     public EditText inputSenha;
     public ImageView btnExpandirAppBar;
     public FrameLayout containerFrame;
@@ -64,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
         cardViewExpansivelBottom = findViewById(R.id.cardViewExpansivelBottom);
         cardViewTransparente = findViewById(R.id.cardViewTransparente);
         cardViewAlternarconta = findViewById(R.id.cardViewAlternarconta);
+        cardViewPopupPassword = findViewById(R.id.cardViewPopupPassword);
         cardViewinputs = findViewById(R.id.cardViewInputs);
         inputSenha = findViewById(R.id.inputSenha);
         containerFrame = findViewById(R.id.container_frame);
@@ -114,6 +116,7 @@ public class LoginActivity extends AppCompatActivity {
         btnBackSpace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                controller.popUpPasswordError(false);
                 if(inputSenha.getText().toString().length() > 0){
                     int charIndex = 0;
                     String text = inputSenha.getText().toString();
@@ -127,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
         btnAcessar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, TabMenuActivity.class));
+                controller.clickAcess();
             }
         });
 

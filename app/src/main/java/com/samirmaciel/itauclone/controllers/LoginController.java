@@ -1,13 +1,21 @@
 package com.samirmaciel.itauclone.controllers;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Intent;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.samirmaciel.itauclone.R;
 import com.samirmaciel.itauclone.views.activities.LoginActivity;
+import com.samirmaciel.itauclone.views.activities.TabMenuActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -79,11 +87,11 @@ public class LoginController {    private LoginActivity view;
     }
 
     public void inputPassword(){
-
         if(view.cardViewButtonsInput.getVisibility() == View.GONE){
             TransitionManager.beginDelayedTransition(view.cardViewinputs, new AutoTransition());
             view.cardViewButtonsInput.setVisibility(View.VISIBLE);
         }
+
         hideSoftKeyboard(view);
     }
 
@@ -97,5 +105,14 @@ public class LoginController {    private LoginActivity view;
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void clickAcess(){
+        popUpPasswordError(true);
+        //view.startActivity(new Intent(view, TabMenuActivity.class));
+    }
+
+    public void popUpPasswordError(boolean show) {
+        TransitionManager.beginDelayedTransition(view.cardViewinputs, new AutoTransition());
+        view.cardViewPopupPassword.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 }
