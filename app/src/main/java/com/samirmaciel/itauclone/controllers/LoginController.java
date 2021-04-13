@@ -107,12 +107,18 @@ public class LoginController {    private LoginActivity view;
         }
     }
     public void clickAcess(){
-        popUpPasswordError(true);
-        //view.startActivity(new Intent(view, TabMenuActivity.class));
+        if(popUpPasswordError()) {
+            view.startActivity(new Intent(view, TabMenuActivity.class));
+        }
     }
 
-    public void popUpPasswordError(boolean show) {
-        TransitionManager.beginDelayedTransition(view.cardViewinputs, new AutoTransition());
-        view.cardViewPopupPassword.setVisibility(show ? View.VISIBLE : View.GONE);
+    public boolean popUpPasswordError() {
+        if(view.inputSenha.getText().length() < 5) {
+            TransitionManager.beginDelayedTransition(view.cardViewinputs, new AutoTransition());
+            view.cardViewPopupPassword.setVisibility(View.VISIBLE);
+            return false;
+        }else{
+            return true;
+        }
     }
 }
